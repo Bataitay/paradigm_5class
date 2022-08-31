@@ -17,7 +17,8 @@ class ProductController extends Controller
             $this->productService->all(),
             200);
     }
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         $data = $request->all();
         if ($request->hasFile('image')) {
             $completeFileName = $request->file('image')->getClientOriginalName();
@@ -32,7 +33,8 @@ class ProductController extends Controller
             $this->productService->create($data),
             200);
     }
-    public function show($id){
+    public function show($id)
+    {
         return response()->json(
             $this->productService->find($id)
             ,200
