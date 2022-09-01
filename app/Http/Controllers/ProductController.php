@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+//controller
 use App\Services\Product\ProductServiceInterface;
 use Illuminate\Http\Request;
 
@@ -40,7 +40,8 @@ class ProductController extends Controller
             ,200
         );
     }
-    public function update($id, Request $request){
+    public function update($id, Request $request)
+    {
         $data = $request->all();
         if ($request->hasFile('image')) {
             $completeFileName = $request->file('image')->getClientOriginalName();
@@ -56,7 +57,8 @@ class ProductController extends Controller
             200
         );
     }
-    public function destroy( $id){
+    public function destroy( $id)
+    {
 
         return response()->json(
             $this->productService->delete($id),
