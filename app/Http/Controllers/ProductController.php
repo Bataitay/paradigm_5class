@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-//controller
+//controllers
 use App\Services\Product\ProductServiceInterface;
 use Illuminate\Http\Request;
 
